@@ -1,0 +1,65 @@
+/* style common for document -starts*/
+* {margin:0px; padding:0px;}
+/* style common for document -ends*/
+
+/* style common for header -starts*/
+
+.header { background-color: #6D84A2; -webkit-box-sizing: border-box; height: 50px; padding:10px;text-align:center; border-bottom: 1px solid black; top:0px; position:fixed; width:100%;}
+
+.header h1{color:white; text-shadow: 3px 3px 2px black;}
+
+/* style common for header -ends*/
+
+/* style common for content -starts*/
+.content {overflow:hidden; padding-top:50px; background-color: #DDD;}
+.content ul.menu-list{list-style:none; background-color: #9CF; margin:10px 15px;font-size: 16px; font-family:"Comic Sans MS", cursive;border: 3px solid black; border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius:8px;}
+.content ul.menu-list li { border-top: 1px solid black;padding:20px 40px;background: transparent url(../images/arrow.png) 95% center no-repeat;cursor:pointer;}
+.content ul.menu-list li:first-child{border-top:none;}
+.content ul.menu-list li a {color:black; text-decoration:none;padding-right:95%;}
+.content ul.menu-list li a:hover {color: #00A; text-decoration:underline;}
+
+/* style common for content -ends*/
+
+
+.wrapper
+{
+  width: 256px;
+  position: relative;
+  margin: 60px auto;
+}
+.visible-area
+{
+  width: 256px;
+  height: 256px;
+  overflow: hidden;
+  position: relative;
+}
+.slider
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slider img
+{
+  float: left;
+}
+.previous
+{
+  width: 100px; 
+  height: 30px;
+  float: left;          
+
+  background: #f00;
+}
+.next
+{
+  width: 100px; 
+  height: 30px;
+  float: right; 
+  background: #f00;
+}
+.clear
+{
+  clear: both;
+}
