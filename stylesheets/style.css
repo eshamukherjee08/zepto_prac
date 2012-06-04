@@ -23,14 +23,14 @@
 
 .wrapper
 {
-  width: 256px;
+  width: 320px;
   position: relative;
   margin: 60px auto;
 }
 .visible-area
 {
-  width: 256px;
-  height: 256px;
+  width: 320px;
+  height: 315px;
   overflow: hidden;
   position: relative;
 }

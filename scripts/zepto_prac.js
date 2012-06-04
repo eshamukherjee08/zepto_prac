@@ -1,21 +1,5 @@
 var zepto_func = function () {
   
-  function show_func(activate) {
-    console.log("!!:)!!");
-    // var elements = $('ul.menu-list li');
-    // elements.on('tap', function(){
-    //   alert("hi");
-    // });
-    $('.next').on('tap', function(){
-      // alert($('.next').siblings()[0]);
-      alert($('.slider img').size());
-      var imagewidth = 256;// $('.visible-area').width();                 
-      var totalimages = $('.slider img').size();                    
-      var sliderwidth = imagewidth * totalimages;                   
-      $('.slider').css({'width': sliderwidth});
-    });
-  }
-  
   function GetImageArray()
   {
       var arrImage=new Array();
@@ -28,9 +12,9 @@ var zepto_func = function () {
       for(var i=0;i<3;i++)
       {
           if(i==0)
-              imgString="<a href='#'><img id='img"+(i+1)+"' src='"+(arrImage[i])+"' alt='img' height='256' width='256'/></a>";
+              imgString="<a href='#'><img id='img"+(i+1)+"' src='"+(arrImage[i])+"' alt='img' height='315' width='320'/></a>";
           else
-              imgString=imgString+"<a href='#'><img id='img"+(i+1)+"' src='"+(arrImage[i])+"' alt='img' height='256' width='256'/></a>";
+              imgString=imgString+"<a href='#'><img id='img"+(i+1)+"' src='"+(arrImage[i])+"' alt='img' height='315' width='320'/></a>";
       }       
 
       $('#slider').html(imgString);
@@ -38,13 +22,9 @@ var zepto_func = function () {
   
   return {
     
-    init: function () {
-      var activate = ('createTouch' in document) ? 'touchstart' : 'click'
-      
-      // show_func(activate);
+    init: function () {      
       GetImageArray();
-      // show_func(activate);
-      var imagewidth = 256;                 
+      var imagewidth = 320;                 
       var totalimages = $('.slider img').size();                    
       var sliderwidth = imagewidth * totalimages;                   
       $('.slider').css({width : sliderwidth + 'px'});                     
@@ -54,23 +34,24 @@ var zepto_func = function () {
       //      alert("hi");
       // });
       
-      $('.next').on('tap', function(){                                  
-
-         // alert($('.slider').width());
+      $('.slider').on('swipeLeft', function(){       
+         // alert($('.visible-area'));                           
          if(count<totalimages-1) 
           {count=count+1;}     
           var sliderposition = count * imagewidth; 
           // alert(sliderposition) 
-          // $('.slider').animate({left: -sliderposition+'px'}, 1000);  
+          // alert("1");
+          // $('.slider').animate({left: -sliderposition+'px'}, 1000, 'ease-in');  
           $('.slider').css({left: -sliderposition+'px'});  
       }); 
 
-      $('.previous').on('tap', function(){                                             
+      $('.slider').on('swipeRight', function(){      
            if(count>=1)
               {count=count-1;} 
 
-          var sliderposition = count * imagewidth;                 
-          // $('.slider').animate({'left': -sliderposition}, 1000);   
+          var sliderposition = count * imagewidth;           
+          // alert("2");        
+          // $('.slider').animate({'left': -sliderposition}, 1000, 'ease-in');
           $('.slider').css({left: -sliderposition}, 1000);  
       });
     }
