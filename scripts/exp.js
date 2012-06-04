@@ -39,7 +39,10 @@ var zepto_func_exp = function () {
           {count=count+1;}     
           var sliderposition = count * imagewidth; 
           // alert(sliderposition) 
-          $('.slider').animate({left: -sliderposition+'px'}, 1000);  
+          // $('.slider').animate({left: -sliderposition+'px'}, 1000);  
+          $(".slider").animate({
+            opacity: 0.25, left: '50px', rotateZ: '45deg', color: '#abcdef'
+          }, 2, 'ease-out')
       }); 
 
       $('.previous').on('click', function(){                                        

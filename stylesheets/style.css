@@ -4,7 +4,7 @@
 
 /* style common for header -starts*/
 
-.header { background-color: #6D84A2; -webkit-box-sizing: border-box; height: 50px; padding:10px;text-align:center; border-bottom: 1px solid black; top:0px; position:fixed; width:100%;}
+.header { background-color: #6D84A2; -webkit-box-sizing: border-box; height: 50px; padding:10px;text-align:center; border-bottom: 1px solid black; top:0px; /*position:fixed;*/ width:100%;}
 
 .header h1{color:white; text-shadow: 3px 3px 2px black;}
 
