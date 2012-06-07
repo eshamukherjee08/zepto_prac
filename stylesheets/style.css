@@ -23,14 +23,16 @@
 
 .wrapper
 {
-  width: 320px;
+  width: 100%;
   position: relative;
-  margin: 60px auto;
+  margin: 5px auto;
 }
 .visible-area
 {
-  width: 320px;
-  height: 315px;
+  width: 100%;
+  min-height: 300px;
+/*  height:100%;*/
+/*  max-height: 900px;*/
   overflow: hidden;
   position: relative;
 }
@@ -43,6 +45,8 @@
 .slider img
 {
   float: left;
+/*  min-height: 480px;*/
+/*  max-height: 900px;*/
 }
 .previous
 {
