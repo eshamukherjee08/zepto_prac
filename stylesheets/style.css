@@ -30,7 +30,7 @@
 .visible-area
 {
   width: 100%;
-  min-height: 300px;
+  min-height: 320px;
 /*  height:100%;*/
 /*  max-height: 900px;*/
   overflow: hidden;
@@ -39,8 +39,20 @@
 .slider
 {
   position: absolute;
+  top: 20px;
+  left: 0;
+  height: 100%;
+}
+
+.slider-text
+{
+  position: absolute;
   top: 0;
   left: 0;
+}
+
+.slider-text div {
+	float:left;
 }
 .slider img
 {
